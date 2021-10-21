@@ -34,7 +34,7 @@
 }
 
 .currency-card__price {
-  text-align: center;
+  text-align: left;
 }
 
 .currency-card__current {
