@@ -47,13 +47,13 @@ function CurrencyCard({ currencyInfo }) {
     <div className="currency-card__container">
       <div className="currency-card__header">
         <h2>
-          Current price: {from} {to}
+          {from} {to}
         </h2>
 
         <h3>{time}</h3>
       </div>
       <h4 className="currency-card__price">
-        {price} <span className="currency-card__unit">{to}</span>
+        Current price: {price} <span className="currency-card__unit">{to}</span>
       </h4>
       <div className="currency-card__data">
         <div className="currency-card__information">
