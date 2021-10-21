@@ -1,0 +1,53 @@
+.currency-card__container h4,
+.currency-card__container p {
+  margin: 4px;
+}
+
+.currency-card__container {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  width: 350px;
+  height: 225px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.currency-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 10px;
+}
+.currency-card__header > * {
+  margin: 5px;
+}
+
+.currency-card__header > *:nth-child(1) {
+  text-decoration: underline;
+}
+.currency-card__header > *:nth-child(2) {
+  background-color: black;
+  border-bottom-left-radius: 5px;
+  color: white;
+  box-shadow: 0 0 0 20px black;
+}
+
+.currency-card__price {
+  text-align: center;
+}
+
+.currency-card__current {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.currency-card__unit {
+  font-weight: bold;
+}
+.currency-card__rsi {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
