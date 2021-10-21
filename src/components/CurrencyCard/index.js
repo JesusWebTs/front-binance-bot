@@ -79,10 +79,10 @@ function CurrencyCard({ currencyInfo }) {
               RSI: <strong>{currencyInfo.RSI.current}</strong>
             </p>
             <p>
-              O Buy: <strong>{currencyInfo.RSI.overBuy}</strong>{" "}
+              Sell: <strong>{currencyInfo.RSI.overBuy}</strong>{" "}
             </p>
             <p>
-              O Sell: <strong>{currencyInfo.RSI.overSell}</strong>{" "}
+              Buy: <strong>{currencyInfo.RSI.overSell}</strong>{" "}
             </p>
             <p>
               signal: <strong>{currencyInfo.signal}</strong>{" "}
