@@ -16,24 +16,24 @@ function CurrencyCard({ currencyInfo }) {
     setTo(to);
     setTime(time);
     setUsdtAvailable(
-      parseFloat(currencyInfo["usdt-available"]).toFixed(2) > 0
+      parseFloat(currencyInfo["usdt-available"]) > 1
         ? parseFloat(currencyInfo["usdt-available"]).toFixed(2)
         : currencyInfo["usdt-available"]
     );
     setCoinAvailable(
-      parseFloat(currencyInfo["coin-available"]).toFixed(2) > 0
+      parseFloat(currencyInfo["coin-available"]) > 1
         ? parseFloat(currencyInfo["coin-available"]).toFixed(2)
         : currencyInfo["coin-available"]
     );
     setPrice(
-      parseFloat(currencyInfo.price).toFixed(2) > 0
+      parseFloat(currencyInfo.price) > 1
         ? parseFloat(currencyInfo.price).toFixed(2)
         : currencyInfo.price
     );
 
     if (currencyInfo["coin-available"] > 0) {
       setUsdtAproximate(
-        parseFloat(coinAvailable * price).toFixed(2) > 0
+        parseFloat(coinAvailable * price) > 1
           ? parseFloat(coinAvailable * price).toFixed(2)
           : coinAvailable * price
       );
