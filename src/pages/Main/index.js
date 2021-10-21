@@ -14,7 +14,7 @@ function Main() {
     });
     setTotalBalance(totalBalance);
     return () => {};
-  }, []);
+  }, [currencysInfo]);
   return (
     <div>
       <Header
