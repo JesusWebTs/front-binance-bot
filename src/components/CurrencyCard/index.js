@@ -47,7 +47,7 @@ function CurrencyCard({ currencyInfo }) {
     <div className="currency-card__container">
       <div className="currency-card__header">
         <h2>
-          {from} {to}
+          Current price: {from} {to}
         </h2>
 
         <h3>{time}</h3>
@@ -58,7 +58,7 @@ function CurrencyCard({ currencyInfo }) {
       <div className="currency-card__data">
         <div className="currency-card__information">
           <h4>
-            Balance Actual ≈ {usdtAproximate}{" "}
+            Current Balance ≈ {usdtAproximate}{" "}
             <span className="currency-card__unit">{to}</span>
           </h4>
           <div className="currency-card__current">
@@ -73,7 +73,7 @@ function CurrencyCard({ currencyInfo }) {
           </div>
         </div>
         <div className="currency-card__estadistics">
-          <h4>Estadisticas</h4>
+          <h4>Statistics</h4>
           <div className="currency-card__rsi">
             <p>
               RSI: <strong>{currencyInfo.RSI.current}</strong>
