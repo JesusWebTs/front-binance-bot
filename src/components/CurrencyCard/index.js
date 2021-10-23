@@ -46,9 +46,9 @@ function CurrencyCard({ currencyInfo }) {
   return (
     <div
       className={`currency-card__container ${
-        currencyInfo.RSI.current > 70
+        currencyInfo.RSI.signal === "SELL"
           ? "currency-card__container--sell"
-          : currencyInfo.RSI.current < 30
+          : currencyInfo.RSI.signal < "BUY"
           ? "currency-card__container--buy"
           : ""
       } `}
@@ -93,7 +93,7 @@ function CurrencyCard({ currencyInfo }) {
               Buy: <strong>{currencyInfo.RSI.overSell}</strong>{" "}
             </p>
             <p>
-              signal: <strong>{currencyInfo.signal}</strong>{" "}
+              signal: <strong>{currencyInfo.RSI.signal}</strong>{" "}
             </p>
           </div>
         </div>
