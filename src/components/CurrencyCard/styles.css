@@ -13,6 +13,13 @@
   overflow: hidden;
 }
 
+.currency-card__container--sell {
+  background-color: #ff6961DD;
+}
+.currency-card__container--buy {
+  background-color: #bdecb6;
+}
+
 .currency-card__header {
   display: flex;
   justify-content: space-between;

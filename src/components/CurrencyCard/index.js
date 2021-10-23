@@ -44,7 +44,15 @@ function CurrencyCard({ currencyInfo }) {
     return () => {};
   }, [currencyInfo]);
   return (
-    <div className="currency-card__container">
+    <div
+      className={`currency-card__container ${
+        currencyInfo.RSI.current > 70
+          ? "currency-card__container--sell"
+          : currencyInfo.RSI.current < 30
+          ? "currency-card__container--buy"
+          : ""
+      } `}
+    >
       <div className="currency-card__header">
         <h2>
           {from} {to}
