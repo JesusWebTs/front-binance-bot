@@ -12,6 +12,7 @@ function CurrencyCard({ currencyInfo }) {
 
   useEffect(() => {
     const [from, to, time] = currencyInfo.currencyName.split("_");
+    console.log(currencyInfo);
     setFrom(from);
     setTo(to);
     setTime(time);
