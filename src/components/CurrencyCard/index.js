@@ -49,7 +49,7 @@ function CurrencyCard({ currencyInfo }) {
       className={`currency-card__container ${
         currencyInfo.RSI.signal === "SELL"
           ? "currency-card__container--sell"
-          : currencyInfo.RSI.signal < "BUY"
+          : currencyInfo.RSI.signal === "BUY"
           ? "currency-card__container--buy"
           : ""
       } `}
