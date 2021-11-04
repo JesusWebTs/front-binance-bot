@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useRoute } from "wouter";
+import { useRoute, useLocation } from "wouter";
 import useCurrencys from "../../hooks/useCurrencys";
 import "./styles.css";
 import { TransactionList } from "../../components";
@@ -7,6 +7,7 @@ import { TransactionList } from "../../components";
 function CurrencyPage() {
   const [currency, setCurrency] = useState({});
   const [match, params] = useRoute("/currency/:name");
+  const [location, setLocation] = useLocation();
   const { onUpdateCurrencySelected } = useCurrencys();
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
@@ -59,6 +60,7 @@ function CurrencyPage() {
     <div className="currency-page__container">
       <div className="currency-page__information">
         <div className="currency-page__currency">
+          <button onClick={() => setLocation("/")}>Back</button>
           <div>
             <h2>{params.name}</h2>
             <h3>Price: {currency.price}</h3>
