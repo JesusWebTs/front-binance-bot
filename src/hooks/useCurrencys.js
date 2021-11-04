@@ -56,10 +56,20 @@ const useCurrencys = () => {
     });
   };
 
+  const onUpdateCurrencySelected = ({ currency, onUpdate }) => {
+    RealTimeDatabase.onUpdateCollecion({
+      collection: `trading-history/${currency}`,
+      onUpdate: (data) => {
+        onUpdate(data);
+      },
+    });
+  };
+
   return {
     getCurrencyInfo,
     getAllCurrencysInfo,
     currencysInfo,
+    onUpdateCurrencySelected,
   };
 };
 

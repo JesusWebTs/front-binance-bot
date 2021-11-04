@@ -1,0 +1,13 @@
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  gap: 20px;
+  border: 1px solid black;
+}
+
+.tile-container__BUY {
+  background-color: lightgreen;
+}
+.tile-container__SELL {
+  background-color: salmon;
+}

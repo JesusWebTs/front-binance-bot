@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import "./styles.css";
 
 function CurrencyCard({ currencyInfo }) {
+  const [location, setLocation] = useLocation();
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [time, setTime] = useState(0);
@@ -44,8 +46,13 @@ function CurrencyCard({ currencyInfo }) {
 
     return () => {};
   }, [currencyInfo]);
+
+  const goTransactionHistory = () => {
+    setLocation(`/currency/${from}_${to}_${time}`);
+  };
   return (
     <div
+      onClick={goTransactionHistory}
       className={`currency-card__container ${
         currencyInfo.RSI.signal === "SELL"
           ? "currency-card__container--sell"
@@ -56,7 +63,13 @@ function CurrencyCard({ currencyInfo }) {
     >
       <div className="currency-card__header">
         <h2>
-          {from} {to}
+          <a
+            href={`https://www.binance.com/es/trade/${from}_${to}`}
+            className="currency-card__binance-link"
+            target="_blank"
+          >
+            {from} {to}
+          </a>
         </h2>
 
         <h3>{time}</h3>

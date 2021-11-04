@@ -1,0 +1,28 @@
+.currency-page__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.currency-page__information {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  width: 70%;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.currency-page__RSI {
+  display: flex;
+  gap: 15px;
+}
+
+.currency-page__transactions {
+  background-color: white;
+  width: 70%;
+  padding: 50px;
+  text-align: center;
+}

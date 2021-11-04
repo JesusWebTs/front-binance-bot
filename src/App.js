@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Main } from "./pages";
+import { StaticNavigator } from "./navigator";
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <StaticNavigator />
     </div>
   );
 }
